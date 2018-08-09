@@ -48,6 +48,14 @@ jobs:
           name: Deploy over SSH
           command: ssh -i aws-ubuntu-ec2-key-pair.pem ubuntu@ec2-18-217-24-252.us-east-2.compute.amazonaws.com -y
 
+      - run:
+          name: clone
+          command: cd circle-ci-test && git pull origin master
+
+      - run:
+          name: exit SSH
+          command: exit 
+
 
 workflows:
   version: 2
