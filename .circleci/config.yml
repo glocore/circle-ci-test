@@ -42,7 +42,7 @@ jobs:
             # - "d9:78:1d:84:33:c7:85:5a:9e:ce:2e:c5:1e:00:1c:65"
       - run: 
           name: deploy over SCP
-          command: rsync --rsync-path=/home/ubuntu/bin/rsync -e -rav "ssh -o StrictHostKeyChecking=no" --exclude='node_modules' * ubuntu@ec2-18-191-126-205.us-east-2.compute.amazonaws.com:circle-ci-test
+          command: rsync --rsync-path=/usr/bin/rsync -e -rav "ssh -o StrictHostKeyChecking=no" --exclude='node_modules' * ubuntu@ec2-18-191-126-205.us-east-2.compute.amazonaws.com:circle-ci-test
           # command: scp -r -o StrictHostKeyChecking=no * ubuntu@ec2-18-191-126-205.us-east-2.compute.amazonaws.com:circle-ci-test
   
   # deploy:
