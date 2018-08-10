@@ -43,7 +43,7 @@ jobs:
 
       - run: 
           name: Install rsync
-          command: sudo apt install rsync
+          command: sudo apt-get install rsync
 
       - run: 
           name: deploy over SCP
